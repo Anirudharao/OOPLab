@@ -6,20 +6,17 @@ public class Lab4Prg5 {
 
 	public static void main(String[] args) {
 		int m, n;
-		Scanner sc1 = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter m: ");
-		m = sc1.nextInt();
-		Scanner sc2 = new Scanner(System.in);
+		m = sc.nextInt();
 		System.out.print("Enter n: ");
-		n = sc2.nextInt();
+		n = sc.nextInt();
 		int[][] arr = new int[m][n];
-		
-		Scanner sc3 = new Scanner(System.in);
 		System.out.println("Enter the elements");
 		
 		for(int i=0; i<m; i++) {
 			for(int j=0; j<n; j++) {
-				arr[i][j] = sc3.nextInt();
+				arr[i][j] = sc.nextInt();
 			} System.out.println();
 		}
 		
@@ -28,14 +25,20 @@ public class Lab4Prg5 {
 		int squares = 0;
 		int norm = 0;
 		
-		for(int i=0; i<m; i++) {
-			for(int j=0; j<n; j++) {
-				if(i==j) {
-					trace += arr[i][i];
-					norm += arr[i][i] * arr[i][i];
+		if(m != n) {
+			System.out.println("The entered matrix is not a square matrix");
+		}
+		else {
+			for(int i=0; i<m; i++) {
+				for(int j=0; j<n; j++) {
+					if(i==j) {
+						trace += arr[i][i];
+					}
+						squares += arr[i][j] * arr[i][j];
 				}
 			}
 		}
+		norm = (int)Math.pow(squares, 0.5);
 		System.out.println("Trace is: " + trace + ". Norm is: " + norm);
 	}
 
