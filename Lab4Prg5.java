@@ -25,6 +25,7 @@ public class Lab4Prg5 {
 		
 		
 		int trace = 0;
+		int squares = 0;
 		int norm = 0;
 		
 		for(int i=0; i<m; i++) {
