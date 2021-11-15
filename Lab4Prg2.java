@@ -10,7 +10,7 @@ public class Lab4Prg2 {
 		n = sc.nextInt();
 		
 		int[] arr = new int[n];
-		System.out.print("Enter the elements of the Array: ");
+		System.out.print("Enter the elements of the array: ");
 		for(int i=0; i<n; i++) {
 			arr[i] = sc.nextInt();
 		}
@@ -21,7 +21,7 @@ public class Lab4Prg2 {
 		for(int i=0; i<n; i++) {
 			if(arr[i] >= max) {
 				max = arr[i];
-			} else if(arr[i] <= min) {
+			}  if(arr[i] < min) {
 				min = arr[i];
 			}
 		}
