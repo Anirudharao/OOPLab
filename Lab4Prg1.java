@@ -1,5 +1,7 @@
 package oopLabs;
 
+import java.util.Scanner;
+
 public class Lab4Prg1 {
 	
 	static boolean isPrime(int x) {
@@ -22,8 +24,15 @@ public class Lab4Prg1 {
 	}
 
 	public static void main(String[] args) {
-		int[] a = new int[] {5, 1,  2, 6, 7, 9, 3, 6, 4, 8};
-		int n = 10;
+		int n;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number of elements in the array: ");
+		n = sc.nextInt();
+		int[] a = new int[n];
+		System.out.print("Enter the elements of the array: ");
+		for(int i=0; i<n; i++) {
+			a[i] = sc.nextInt();
+		}
 		for(int i=0; i<n; i++) {
 			if(isPrime(a[i])) {
 				System.out.print(a[i]);
