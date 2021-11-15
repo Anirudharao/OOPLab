@@ -1,14 +1,31 @@
 package oopLabs;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Lab4Prg4 {
 
 	public static void main(String[] args) {
-		int a[] = new int[] {1, 2, 3, 9, 7};
-		int m = a.length;
-		int b[] = new int[] {4, 8, 6, 5};
-		int n = b.length;
+		int m;
+		System.out.print("Enter m: ");
+		Scanner sc = new Scanner(System.in);
+		m = sc.nextInt();
+		System.out.println("Enter the elements of the first array");
 		
+		int a[] = new int[m];
+		for(int i=0; i<m; i++) {
+			a[i] = sc.nextInt();
+		}
+		
+		int n;
+		System.out.print("Enter n: ");
+		Scanner sc1 = new Scanner(System.in);
+		n = sc.nextInt();
+		
+		System.out.println("Enter the elements of the second array");
+		int b[] = new int[n];
+		for(int i=0; i<n; i++) {
+			b[i] = sc.nextInt();
+		}
 		
 		int[] c = new int[m+n];
 		
@@ -28,7 +45,7 @@ public class Lab4Prg4 {
 		System.out.println();
 		
 		Arrays.sort(c);
-		
+		System.out.println("Array after sorting: ");
 		for(int i=0; i<m+n; i++) {
 			System.out.print(c[i]);
 			System.out.print("  ");
