@@ -6,18 +6,19 @@ public class Lab2Prg2 {
 
 	public static void main(String[] args) {
 		int a, b, c;
-		Scanner sc1 = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter a: ");
-		a = sc1.nextInt();
-		Scanner sc2 = new Scanner(System.in);
+		a = sc.nextInt();
+		
 		System.out.print("Enter b: ");
-		b = sc2.nextInt();
-		Scanner sc3 = new Scanner(System.in);
+		b = sc.nextInt();
+		
 		System.out.print("Enter c: ");
-		c = sc3.nextInt();
+		c = sc.nextInt();
 		
 		int ans = (c > ((a>b)? a:b))? c : (a>b)? a:b;
-		System.out.println(ans);
+		int ans2 = (c < ((a<b)? a:b))? c : (a<b)? a:b;
+		System.out.println(ans + " " + ans2);
 	}
 
 }
