@@ -37,45 +37,30 @@ class Result{
 			}
 			total[i] = sum;
 		}
+		System.out.println("Total: ");
 		for(int i=0; i<3; i++) {
 			System.out.print(total[i] + "  ");
 		}
+		System.out.println();
 	}
 	
 	void SubTopper() {
-		int highest[] = new int[20];
-		int roll[] = new int[3];
-		int m = 0;
-		int i,j,k = 0;
-		int ans=0;
-		for(j=0; j<3; j++) {
-			for(i=0; i<3; i++) {
-				ans = Math.max(ans, mark[i][j]);
+		
+		int max, h;
+		
+		for(int j=0; j<3; j++) {
+			max = mark[0][j];
+			h = 0;
+			for(int i=0; i<3; i++) {
+				if(mark[i][j] > max) {
+					max = mark[i][j];
+					h = i;
+				}
 			}
-				highest[k] = ans;
-				k++;
-				roll[m] = (i+1);
-				m++;
+			System.out.println("Highest mark in subject " + (j+1) + " is " + max + ", scored by roll number " + (h+1));
 		}
 		
-		
-		System.out.println();
-		System.out.println("Subject toppers: ");
-		for(k=0; k<3; k++) {
-			System.out.println("Subject " + (k+1) + ": Roll number: " + (m) + ", Marks: " + highest[k] + "  ");
-			
-		}
-//		k = 0;
-		System.out.println();
-//		System.out.println("Roll Numbers of subject toppers: ");
-//		for(i=0; i<3; i++) {
-//			for(j=0; j<3; j++) {
-//				if(mark[i][j] == highest[k]) {
-//					System.out.print((i+1) + "  ");
-//					k++;
-//				}
-//			}
-//		}
+
 	}
 	
 	void topper(){
