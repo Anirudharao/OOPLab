@@ -21,7 +21,7 @@ class Stack{
     }
     
     public int pop(){
-        if(isFull()){
+        if(isEmpty()){
             System.out.println("Stack underflow");
             System.exit(1);
         }
